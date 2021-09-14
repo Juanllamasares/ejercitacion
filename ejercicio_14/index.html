@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°14</title>
+</head>
+<body>
+    <h2>Ejercicio n°14, ver en consola</h2>
+    <!--Crea una funcion para convertir grados celcius a fahrenheit y viceversa-->
+    <script>
+        'use strict'
+        const convertirGrados = (grados=undefined,unidad=undefined)=>{
+            if(grados===undefined||typeof grados!=="number")return console.warn("No ingresaste ningun numero");
+            if(typeof unidad!=="string"||unidad===undefined)return console.warn("no ingresaste la unidad");
+            if(unidad.length!==1||!/(C|F)/.test(unidad))return console.warn("no ingresaste unidad valida,debes ingresar C o F");
+            if(unidad==="C")
+                return console.log(`${grados}°C=${Math.round(grados*(9/5)+32)}°F`);
+            if(unidad==="F")
+            return console.log(`${grados}°F=${Math.round((grados-32)*(5/9))}°C`);
+                
+
+        }
+        convertirGrados(23,"C");
+        convertirGrados(10,"F");
+
+    </script>
+</body>
+</html>

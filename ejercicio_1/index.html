@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°1</title>
+</head>
+<body>
+
+    <h1>Ejercicio n°1 ver en consola</h1>
+
+    <!--Crea una funcion que devuelva la cantidad de caracteres de una cadena ingresada-->
+
+    <script>
+
+    'use strict'
+
+    /*function contarCaracteres(cadena=""){
+        if(!cadena){
+            console.warn("No ingresaste ningun caracter")
+        }else{
+            console.info(`cadena ingresada: ${cadena} , cantidad de caracteres: ${cadena.length}`)
+        }
+    }*/
+    const contarCaracteres = (cadena="")=>(!cadena)?console.warn("No ingresaste ningun caracter"):console.info(`cadena ingresada: ${cadena} , cantidad de caracteres: ${cadena.length}`)
+
+    contarCaracteres("hola mundo");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°8</title>
+</head>
+<body>
+    <h2>Ejercicio n°8, ver en consola</h2>
+    <!--Crea una funcion que elimine cierto patron de caracteres de un texto dado-->
+    <script>
+        'use strict'
+        const eliminarCaracter = (texto="",caracter="")=>{
+            if (!texto) return console.warn("no ingresaste ninguna cadena de texto");
+
+            if (!caracter) return console.warn("no ingresaste el caracter a retirar");
+
+            console.log(texto.replace(new RegExp(caracter,"ig"),""));
+        }
+
+        eliminarCaracter("lorem ipsur dolorem","e")
+
+    </script>
+</body>
+</html>

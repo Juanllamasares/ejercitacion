@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°16</title>
+</head>
+<body>
+    <h2>Ejercicio n°16, ver en consola</h2>
+    <!--Crea una funcion que devuelva el monto final despues de aplicarle un descuento a una cantidad dada-->
+    <script>
+        'use strict'
+        const calcularDescuento = (monto=undefined,descuento=undefined)=>{
+            if(monto===undefined||typeof monto!=="number"||monto<=0)return console.warn("monto invalido");
+            if(descuento===undefined||typeof descuento!=="number"||descuento<0)return console.warn("descuento invalido");
+
+            return console.log(`$${monto} - ${descuento}% = precio final: $${monto-((monto*descuento)/100)}`);
+        }
+
+        calcularDescuento(1000,20);
+    </script>
+</body>
+</html>

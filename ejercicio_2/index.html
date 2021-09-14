@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejercicio n°2, ver en consola</h2>
+    <!--Crea una funcion que te devuelva el texto recortado segun el numero de caracteres indicados-->
+    <script>
+        'use strict'
+        const recortarTexto = (cadena="",longitud=undefined)=>(!cadena)?console.warn("No ingresaste ningun texto"):(longitud===undefined)?console.warn("No ingresaste la longitud"):console.log(`Tu texto recortado es: ${cadena.slice(0,longitud)}`)
+
+        recortarTexto("hola mundo",5);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°4</title>
+</head>
+<body>
+    <h2>Ejercicio n°4, ver en consola</h2>
+    <!--Crea una funcion que repita un texto X veces-->
+    <script>
+        'use strict'
+        const repetirTexto =(texto="",veces=undefined)=>{
+            if(!texto){
+                return console.warn("No ingresaste texto")
+            }else if(veces===undefined || veces<=0){
+                return console.warn("No ingresaste veces o ingresaste un valor menor o igual a 0")
+            }else{
+                for(let i=0;i<veces;i++){
+                    console.log(texto)
+                }
+            }
+        }
+
+        repetirTexto("hola",);
+        repetirTexto("hola",5);
+        repetirTexto("",6);
+        repetirTexto("hola",8);
+        repetirTexto("hola",0);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°17</title>
+</head>
+<body>
+    <h2>Ejercicio n°17, ver en consola</h2>
+    <!--Crea una funcion que dada una fecha valida determine cuantos años han pasado hasta el dia de hoy-->
+    <script>
+        'use strict'
+        const calcularYear = (fecha=undefined)=>{
+            if(fecha===undefined)return console.warn("No ingresaste la fecha");
+            if(!(fecha instanceof Date))return console.warn("No instanciaste fecha");
+
+            let hoyMenosFecha = new Date().getTime()-fecha.getTime(),
+            yearsMS = 1000*60*60*24*365,
+            yearsHumanos = Math.floor(hoyMenosFecha/yearsMS);
+
+            return (yearsHumanos<0)?console.log(`faltan ${Math.abs(yearsHumanos)} años para el ${fecha.getFullYear()}`):(yearsHumanos>=0)?console.log(`han pasado ${yearsHumanos} años desde ${fecha.getFullYear()}`):console.log(`estamos en el año actual ${fhecha.getFullYear()}`)
+
+        }
+
+        calcularYear(new Date(1994,9,24));
+
+
+    </script>
+</body>
+</html>

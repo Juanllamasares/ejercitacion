@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°6</title>
+</head>
+<body>
+    <h2>Ejercicio n°6, ver en consola</h2>
+    <!--Crea una funcion para contar el numero de veces que se repite una palabra en un texto largo-->
+    <script>
+        'use strict'
+        const contarPalabra = (texto="",palabra="")=>{
+            if(!texto) return console.warn("No ingresaste texto");
+            if(!palabra) return console.warn("No ingresaste palabra");
+
+
+            let i = 0, contador = 0;
+            
+            while(i !== -1){
+                i = texto.indexOf(palabra,i);
+                if(i !==-1){
+                    i++;
+                    contador++;
+                }
+            }
+            return console.log(`se repite una cantidad de: ${contador}`);
+        }
+
+        contarPalabra("pepe,hola,pepe","hola");
+        contarPalabra("","hola");
+
+    </script>
+</body>
+</html>

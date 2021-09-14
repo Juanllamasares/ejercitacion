@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°24</title>
+</head>
+<body>
+    <h2>Ejercicio n°24, ver en consola</h2>
+    <!--Crea una funcion que dado un array numerico devuelve un objeto con 2 arrays,1er array acendente y el 2do descendente-->
+    <script>
+        'use strict'
+        const arrayAD = (array=undefined)=>{
+            if (array===undefined||!(array instanceof Array)||array.length===0) return console.warn("No valido");
+
+            for(let num of array){
+                if(typeof num!=="number")return console.warn("el arreglo debe contener solo numeros");
+            }
+
+            return console.log({
+                arrayA:array.map(n=>n).sort(),
+                arrayD:array.reverse()
+            });
+        }
+
+        arrayAD([2,3,4,5]);
+
+    </script>
+</body>
+</html>

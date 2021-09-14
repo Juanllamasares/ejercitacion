@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°10</title>
+</head>
+<body>
+    <h2>Ejercicio n°10, ver en consola</h2>
+    <!--Crea una funcion que reciba un numero y evalue si es capicua o no-->
+    <script>
+        'use strict'
+        const capicua = (num=0)=>{
+            if(!num) return console.warn("no ingresaste un numero");
+            if(typeof num!=="number") return console.warn("no ingresaste un numero");
+            
+            num = num.toString();
+            let reves = num.split("").reverse().join("");
+
+            return (num===reves)?console.log("es capicua"):console.log("no es capicua")
+        }
+
+        capicua(2003);
+        capicua(2002);
+
+    </script>
+</body>
+</html>

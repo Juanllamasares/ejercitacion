@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°19</title>
+</head>
+<body>
+    <h2>Ejercicio n°19, ver en consola</h2>
+    <!--Crea una funcion que valide que un texto sea un mail valido-->
+    <script>
+        'use strict'
+        const validarEmail = (mail="")=>{
+            if(!mail||typeof mail!=="string")return console.warn("No ingresaste un mail");
+
+            let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(mail);
+
+            return (expReg)?console.log("mail valido"):console.warn("mail invalido");
+        }
+
+        validarEmail("juanllama@gmail.com");
+        validarEmail("juanllamagmail.com");
+        validarEmail("juanllama@gmail.m");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°19</title>
+</head>
+<body>
+    <h2>Ejercicio n°19, ver en consola</h2>
+    <!--Crea una funcion que valide que un texto sea un nombre valido-->
+    <script>
+        'use strict'
+        const validarNombre = (nombre="")=>{
+            if(!nombre||typeof nombre!=="string")return console.warn("No ingresaste un nombre");
+
+            let expReg = /^[A-Za-zÑñ\s]+$/g.test(nombre);
+
+            return (expReg)?console.log("Nombre valido"):console.warn("Nombre invalido");
+        }
+
+        validarNombre("juan perez");
+        validarNombre("juan, perez");
+        validarNombre("jua´n perez");
+        validarNombre();
+
+
+
+    </script>
+</body>
+</html>

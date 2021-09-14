@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio n°15</title>
+</head>
+<body>
+    <h2>Ejercicio n°15, ver en consola</h2>
+    <!--Crea una funcion para convertir numeros de base binaria a decimal -->
+    <script>
+        'use strict'
+        const convertir = (numero=undefined,base=undefined)=>{
+            if(numero===undefined||typeof numero!=="number")return console.warn("No ingresaste un numero");
+            if(base===undefined||typeof base!=="number");
+            if(base===2){
+                return console.log(`${numero} base ${base} = ${parseInt(numero,base)} base 10`);
+            }else if(base===10){
+                return console.log(`${numero} base ${base} = ${numero.toString(base)} base 2`);
+            }else{
+                return console.error("el numero base no es valido")
+            }
+        }
+        
+        convertir(2,2);
+        convertir(100,10);
+        convertir(50,2);
+        convertir(100,2);
+    </script>
+</body>
+</html>
